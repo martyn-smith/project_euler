@@ -18,5 +18,5 @@ def Euler_8():
 			product *= int(j)
 		big_product = max(product, big_product)
 	return big_product
-		
-print Euler_8()
+
+print(Euler_8())

@@ -4,7 +4,7 @@ Created on Fri Jul 18 11:01:20 2014
 
 @author: c1346299
 """
-import itertools 
+import itertools
 
 def Euler_4():
 	#verfified
@@ -16,8 +16,8 @@ def Euler_4():
 		if (etadidnac == candidate):
 			big_palindrome = max(big_palindrome, candidate)
 	return big_palindrome
-			#print "{}, {} = {} | {}".format(i, j, candidate, etadidnac) 
-		
+			#print "{}, {} = {} | {}".format(i, j, candidate, etadidnac)
+
 def reverse(num):
 	i = 0
 	mun = 0
@@ -32,4 +32,4 @@ def reverse(num):
 	return mun
 
 
-print Euler_4()
+print(Euler_4())
