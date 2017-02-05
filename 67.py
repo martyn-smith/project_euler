@@ -13,5 +13,5 @@ def Euler_67():
 	#path = brute_force(data)
 	result = smartsum(data)
 	return result
-	
-print Euler_67()
+
+print(Euler_67())

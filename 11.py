@@ -28,6 +28,5 @@ def find_max_in_diagonals(data, big_num = 0):
 			num_left = (data[i][j] * data[i+1][j-1] * data[i+2][j-2] * data[i+3][j-3])
 			big_num = max(big_num, num_right, num_left)
 	return big_num
-	
-print Euler_11()
 
+print(Euler_11())

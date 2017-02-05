@@ -10,5 +10,5 @@ def Euler_10():
 	#verified
 	primes = primegen.all_primes(2e+6)
 	return sum(primes)
-	
-print Euler_10()
+
+print(Euler_10())

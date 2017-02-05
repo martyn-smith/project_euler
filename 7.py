@@ -8,8 +8,8 @@ import primegen
 
 def Euler_7():
 	#verified (104743)
-	# It looks as though it's going to be worth it to write a 
+	# It looks as though it's going to be worth it to write a
 	# generate_primes() module
 	return primegen.nth_prime_by_trial(10001)
-	
-print Euler_7()
+
+print(Euler_7())

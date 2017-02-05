@@ -16,5 +16,4 @@ def leading_digit(i):
 	if (i % 10 == 0):
 		return 1
 	else:
-		return (i % 10)
-	
+		return int(i % 10)

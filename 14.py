@@ -16,7 +16,7 @@ def Euler_14():
 			max_iterations = iterations
 			big_n = n
 	return big_n
-	
+
 def collatz(n):
 	if (n % 2 == 0):
 		n /= 2
@@ -24,12 +24,12 @@ def collatz(n):
 		n *= 3
 		n += 1
 	return n
-	
+
 def collatz_sequence(n):
 	iterations = 0
 	while (n > 1):
 		iterations += 1
 		n = collatz(n)
 	return iterations
-	
-print Euler_14()
+
+print(Euler_14())

@@ -13,5 +13,5 @@ def Euler_13():
 	big_num = sum(data)
 	#big_num /= (10 ** (np.log10(big_num) - 9))
 	return big_num
-	
-print Euler_13()
+
+print(Euler_13())

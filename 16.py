@@ -14,5 +14,5 @@ def Euler_16():
 		result += big_num % 10
 		big_num /= 10
 	return result
-	
-print Euler_16()
+
+print(Euler_16())
