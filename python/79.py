@@ -15,7 +15,7 @@ def Euler_79():
 	pass
 
 def delete_duplicates():
-	with open("../79.dat") as f:
+	with open("../data/79.dat") as f:
 		data = f.readlines()
 		newdata = []
 		for line in data:

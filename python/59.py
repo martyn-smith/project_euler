@@ -7,7 +7,7 @@ KEY_LENGTH = 3
 returns The Gospel of John, chapter 1 with key "god".  Pffft.
 """
 def Euler_59():
-	ciphertxt = np.loadtxt("E:\\python\\Project Euler\\59.dat", dtype=int, delimiter=",")
+	ciphertxt = np.loadtxt("../data/59.dat", dtype=int, delimiter=",")
 	return E59_brute_force(ciphertxt)
 
 def E59_brute_force(ciphertxt):

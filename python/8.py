@@ -4,7 +4,7 @@ Created on Tue Jul 22 12:55:11 2014
 
 @author: c1346299
 """
-FILENAME = "../8.dat"
+FILENAME = "../data/8.dat"
 
 def Euler_8():
 	#verified.  That was easy...

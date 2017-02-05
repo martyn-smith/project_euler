@@ -10,7 +10,7 @@ from numpy import loadtxt, transpose
 def Euler_11():
 	#verified
 	#diagonals are the tricky part, rest is easy
-	data = loadtxt("../11.dat", dtype = int)
+	data = loadtxt("../data/11.dat", dtype = int)
 	big_num = max(find_max_in_rows(data), find_max_in_rows(transpose(data)), find_max_in_diagonals(data))
 	return big_num
 
