@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jul 18 10:57:08 2014
-
-@author: c1346299
+Find the sum of all the multiples of 3 or 5 below 1000. (fizzbuzz++)
 """
 
 def Euler_1():
-	#verified, no point optimising
+	#verified.
 	max_num = 1000
 	sum = 0
 	for i in range(0, max_num):

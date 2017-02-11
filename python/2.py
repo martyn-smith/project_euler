@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jul 18 10:57:53 2014
-
-@author: c1346299
+Find the sum of even-numbered fibonacci terms below four million.
 """
 
 def Euler_2():
@@ -13,13 +11,16 @@ def Euler_2():
 	sum = 0
 	f_prev = []
 	while (f < max_num):
+		#generates the fibonacci sequence
 		if (len(f_prev) >= 2):
 			f += (f_prev[-2])
+		#initial edge cases
 		elif (len(f_prev) == 1):
 			f = 1
 		else:
 			f = 0
-		print("f = {}".format(f))
+		
+		#test for even and sum
 		if (f % 2) == 0:
 			#print "found even f"
 			sum += f

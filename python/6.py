@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul 21 17:17:20 2014
-
-@author: c1346299
+Finds the difference between the sum of the squares of the first one hundred 
+natural numbers and the square of the sum.
 """
 
 def Euler_6_easy_way():

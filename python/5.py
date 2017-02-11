@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jul 18 11:01:20 2014
-
-@author: c1346299
+Finds the smallest positive number that is evenly divisible by all of the
+numbers from 1 to 20.
 """
 import itertools
 """

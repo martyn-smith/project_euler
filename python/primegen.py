@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul 21 17:51:49 2014
-
-@author: c1346299
+various functions to generate primes
 """
-	
-	
+
+
 class PrimesByTrial:
 	primes = []
-	
+
 	def is_prime(self, x):
 		is_prime = True
 		for prime in self.primes:
@@ -18,7 +16,7 @@ class PrimesByTrial:
 		if (is_prime):
 			self.primes.append(x)
 		return is_prime
-		
+
 
 def nth_prime_by_trial(n):
 	#by trial
@@ -32,12 +30,11 @@ def nth_prime_by_trial(n):
 				is_prime = False
 				break
 		if (is_prime):
-			#print "PRIME: {}".format(x)
-			primes.append([x])
-			#print len(primes)
+			#print("Prime: {}\t length: {}\n".format(x, len(primes) + 1))
+			primes.append(x)
 		x += 2
 	return primes[-1]
-	
+
 def all_primes(max_num):
 	#uses a sieve to find all primes below big_num, returns all primes
 	#why it runs so slowly I'm not sure...
@@ -47,7 +44,7 @@ def all_primes(max_num):
 	for i in range(2, len(nums)):
 		if (nums[i] == True):
 			primes.append(i)
-			j = 2 
+			j = 2
 			while (j * i) < len(nums):
 				nums[j * i] = False
 				j += 1

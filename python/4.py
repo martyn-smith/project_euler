@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jul 18 11:01:20 2014
-
-@author: c1346299
+Find the largest palindrome made from the product of two 3-digit numbers.
 """
 import itertools
 

@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul 21 17:46:39 2014
-
-@author: c1346299
+Finds the 10 001st prime number.  Actually just by using primegen
 """
 import primegen
 

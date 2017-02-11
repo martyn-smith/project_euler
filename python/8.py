@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jul 22 12:55:11 2014
-
-@author: c1346299
+the data file contains a 1000-digit number.
+Find the thirteen adjacent digits in the 1000-digit number that have
+the greatest product.
 """
 FILENAME = "../data/8.dat"
 
