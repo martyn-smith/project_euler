@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Thu Jul 24 15:14:50 2014
-
-@author: c1346299
+just sums the numbers in the data file...
 """
 
 import numpy as np

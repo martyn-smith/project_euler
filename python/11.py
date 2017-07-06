@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Jul 22 21:58:56 2014
-
-@author: martyn
+finds the maximum product of four adjacent numbers in a 20x20 grid.
 """
 
 from numpy import loadtxt, transpose
@@ -29,4 +26,5 @@ def find_max_in_diagonals(data, big_num = 0):
 			big_num = max(big_num, num_right, num_left)
 	return big_num
 
-print(Euler_11())
+if __name__ == "__main__":
+	print(Euler_11())

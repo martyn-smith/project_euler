@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Fri Apr 10 17:43:22 2015
-
-@author: martyn
+Finds the smallest number that disproves the Goldbach conjecture.
 """
 from primegen import PrimesByTrial
 import numpy as np
@@ -14,7 +11,7 @@ def Euler_46():
 		print i
 		goldbach = False
 		if ((primes.is_prime(i)) or (i % 2 == 0)):
-			goldbach = True			
+			goldbach = True
 		for j in range(1, (int(np.sqrt((i - 2) / 2))+1)):
 			if goldbach == True:
 				break
@@ -28,7 +25,5 @@ def Euler_46():
 		else:
 			return i
 
-		
-		
-print Euler_46()
-			
+if __name__ == "__main__":
+	print(Euler_46())

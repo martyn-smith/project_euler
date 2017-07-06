@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     If the numbers 1 to 5 are written out in words: one, two, three, four, five,
 	then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
@@ -69,4 +68,5 @@ def make_number_into_words(i, string = ""):
 		string += numbers[digigen.leading_digit(i)] + numbers[0] + numbers[29]
 	return string
 
-print(Euler_17())
+if __name__ == "__main__":
+    print(Euler_17())

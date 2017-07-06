@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Find the sum of even-numbered fibonacci terms below four million.
 """
@@ -19,7 +18,7 @@ def Euler_2():
 			f = 1
 		else:
 			f = 0
-		
+
 		#test for even and sum
 		if (f % 2) == 0:
 			#print "found even f"
@@ -27,4 +26,5 @@ def Euler_2():
 		f_prev.extend([f])
 	return sum
 
-print(Euler_2())
+if __name__ == "__main__":
+	print(Euler_2())

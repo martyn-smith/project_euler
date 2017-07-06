@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Finds the largest prime factor of the number 600851475143.
 """
@@ -50,4 +49,5 @@ def find_biggest_factor(primes, big_num):
 			biggest_factor = max(j, biggest_factor)
 	return biggest_factor
 
-print(Euler_3())
+if __name__ == "__main__":
+	print(Euler_3())

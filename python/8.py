@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 the data file contains a 1000-digit number.
 Find the thirteen adjacent digits in the 1000-digit number that have
@@ -18,5 +17,5 @@ def Euler_8():
 			product *= int(j)
 		big_product = max(product, big_product)
 	return big_product
-
-print(Euler_8())
+if __name__ == "__main__":
+	print(Euler_8())

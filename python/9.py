@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Jul 22 13:53:49 2014
 
@@ -14,4 +13,5 @@ def Euler_9():
 			if ((a**2) == (b**2) + (c**2)):
 				return (a*b*c)
 
-print(Euler_9())
+if __name__ == "__main__":
+	print(Euler_9())

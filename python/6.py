@@ -1,6 +1,6 @@
-# -*- coding: utf-8 -*-
+
 """
-Finds the difference between the sum of the squares of the first one hundred 
+Finds the difference between the sum of the squares of the first one hundred
 natural numbers and the square of the sum.
 """
 
@@ -16,5 +16,6 @@ def Euler_6_better_way():
 	square_of_sum = (100*101/2)**2
 	return (sum_of_squares - square_of_sum)
 
-print("easy way: {}\n".format(Euler_6_easy_way()))
-print("better way: {}".format(Euler_6_better_way()))
+if __name__ == "__main__":
+	print("easy way: {}\n".format(Euler_6_easy_way()))
+	print("better way: {}".format(Euler_6_better_way()))

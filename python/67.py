@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Thu Dec 11 21:18:48 2014
-
-@author: martyn
+Another pathsum, but with more data.
 """
 
 from pathsum import smartsum
@@ -14,4 +11,5 @@ def Euler_67():
 	result = smartsum(data)
 	return result
 
-print(Euler_67())
+if __name__ == "__main__":
+	print(Euler_67())

@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Fri Jul 25 15:00:28 2014
-
-@author: c1346299
+prints the sum of digits of 2**1000
 """
 
 def Euler_16():
@@ -15,4 +12,5 @@ def Euler_16():
 		big_num /= 10
 	return result
 
-print(Euler_16())
+if __name__ == "__main__":
+	print(Euler_16())

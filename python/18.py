@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Aug 12 22:21:38 2014
-
-@author: martyn
+returns a maximum pathsum.
 """
 import numpy as np
 from pathsum import smartsum
@@ -14,4 +11,5 @@ def Euler_18():
 	result = smartsum(data)
 	return result
 
-print(Euler_18())
+if __name__ == "__main__":
+	print(Euler_18())

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
@@ -29,5 +28,5 @@ def reverse(num):
 		i += 1
 	return mun
 
-
-print(Euler_4())
+if __name__ == "__main__":
+	print(Euler_4())

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Finds the smallest positive number that is evenly divisible by all of the
 numbers from 1 to 20.
@@ -21,4 +20,5 @@ def Euler_5():
 		           x = i/prime
     return answer
 
-print(Euler_5())
+if __name__ == "__main__":
+    print(Euler_5())

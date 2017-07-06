@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Aug 11 12:11:44 2014
-
-@author: c1346299
-"""
-
 """
 returns leading and trailing digits of an integer (whilst keeping it an integer)
 """

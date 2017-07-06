@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 various functions to generate primes
 """

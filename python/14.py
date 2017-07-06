@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Thu Jul 24 15:27:02 2014
-
-@author: c1346299
+returns the starting number below one million with the longest collatz chain.
 """
 
 def Euler_14():
@@ -32,4 +29,5 @@ def collatz_sequence(n):
 		n = collatz(n)
 	return iterations
 
-print(Euler_14())
+if __name__ == "__main__":
+	print(Euler_14())

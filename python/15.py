@@ -1,9 +1,9 @@
-# -*- coding: utf-8 -*-
 """
-Created on Fri Jul 25 14:58:26 2014
-
-@author: c1346299
+This doesn't really seem like a problem for a computer...
 """
 
 def Euler_15():
-	#this doesn't really seem like a problem for a computer...
+    return "go work it out yourself, dum-dum"
+
+if __name__ == "__main__":
+    print(Euler_15())

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Finds the 10 001st prime number.  Actually just by using primegen
 """
@@ -10,4 +9,5 @@ def Euler_7():
 	# generate_primes() module
 	return primegen.nth_prime_by_trial(10001)
 
-print(Euler_7())
+if __name__ == "__main__":
+	print(Euler_7())

@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Aug 12 22:24:58 2014
 
-@author: martyn
+author: martyn
 """
 
 def smartsum(data):
@@ -13,13 +12,13 @@ def smartsum(data):
 	above that could be reached by adjacent path.
 	The end result is a row of numbers at the bottom,
 	with the maximum being the result.
-	
+
 	So for:
 	3
 	7 4
 	2 4 6
 	8 5 9 3
-	
+
 	we have:
 	3
 	10 7
@@ -28,7 +27,7 @@ def smartsum(data):
 	"""
 	prev_row = [0]
 	#rowcount = 0
-	for row in (data):
+	for row in data:
 		#rowcount += 1
 		for i in range(0, len(row)):
 			#print i, row[i], prev_row

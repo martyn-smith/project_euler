@@ -1,11 +1,12 @@
+"""
+returns The Gospel of John, chapter 1 with key "god".  Pffft.
+"""
+
 import numpy as np
 from itertools import product
 from string import ascii_lowercase
 KEY_LENGTH = 3
 
-"""
-returns The Gospel of John, chapter 1 with key "god".  Pffft.
-"""
 def Euler_59():
 	ciphertxt = np.loadtxt("../data/59.dat", dtype=int, delimiter=",")
 	return E59_brute_force(ciphertxt)
@@ -38,5 +39,5 @@ def E59_smarter(ciphertxt):
 					trial.extend(str(unichr(j ^ k)))
 """
 
-
-print(Euler_59())
+if __name__ == "__main__":
+	print(Euler_59())

@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-Created on Wed Jan 21 21:11:18 2015
-
-@author: martyn
+Cracks a banking password from single samples, e.g.
+"1st digit y, 3rd x" etc.  Known no more than 6 digits in pw.
 """
 
 def Euler_79():
@@ -21,3 +19,6 @@ def delete_duplicates():
 		for line in data:
 			if not (line in newdata):
 				newdata.append(line)
+
+if __name__ == "__main__":
+	print(Euler_79())
