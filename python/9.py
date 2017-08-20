@@ -1,7 +1,8 @@
 """
-Created on Tue Jul 22 13:53:49 2014
+returns the product of three numbers a,b,c of sum 1000 that satisfy
+the equality a^2 = b^2 + c^2.
 
-@author: c1346299
+I forget what's impressive about that...
 """
 
 def Euler_9():

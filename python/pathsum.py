@@ -1,7 +1,5 @@
 """
-Created on Tue Aug 12 22:24:58 2014
-
-author: martyn
+Currently this module only holds smartsum
 """
 
 def smartsum(data):
