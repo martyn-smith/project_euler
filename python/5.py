@@ -10,14 +10,14 @@ import itertools
 """
 
 def Euler_5():
-	#worked out by HAND.  bit crap really.
+    #worked out by HAND.  bit crap really.
     answer = (2**4)*(3**2)*5*7*11*13*17*19
     primes = [2,3,5,7,11,13,17,19]
     powers = [0,0,0,0,0,0,0,0]
     for i in range (2,20):
-	       for prime in primes:
-		        if (i % prime == 0):
-		           x = i/prime
+           for prime in primes:
+                if (i % prime == 0):
+                   x = i/prime
     return answer
 
 if __name__ == "__main__":

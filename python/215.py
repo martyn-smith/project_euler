@@ -9,5 +9,6 @@ Calculate W(32,10).
 """
 
 def Euler_215(wall_length=9, wall_height=3, brick_lengths=[2,3]):
-  #generate combinations of two and three that sum to wall_length
-  #then combinations for which sum of elements are never equal until wall_length
+    pass
+    #generate combinations of two and three that sum to wall_length
+    #then combinations for which sum of elements are never equal until wall_length
