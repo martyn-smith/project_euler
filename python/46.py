@@ -1,14 +1,14 @@
 """
 Finds the smallest number that disproves the Goldbach conjecture.
 """
-from primegen import PrimesByTrial
+from primes import PrimesByTrial
 import numpy as np
 
 def Euler_46():
     i = 2
     primes = PrimesByTrial()
     while True:
-        print i
+        print(i)
         goldbach = False
         if ((primes.is_prime(i)) or (i % 2 == 0)):
             goldbach = True

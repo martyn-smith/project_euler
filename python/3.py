@@ -2,13 +2,13 @@
 Finds the largest prime factor of the number 600851475143.
 """
 import numpy as np
-import primegen
+import primes
 
 def Euler_3():
     big_num = 600851475143
     #generate all the candidate primes
     max_num = int(np.sqrt(big_num))
-    primes = primegen.all_primes(max_num)
+    primes = primes.all_primes(max_num)
     return find_biggest_factor(primes, big_num)
 
 """
@@ -37,7 +37,7 @@ def find_biggest_factor(primes, big_num):
     biggest_factor = 0
     for j in primes:
         if (big_num % j == 0):
-            other_factor = big_num/j
+            other_factor = big_num / j
             is_prime = True
             for k in primes:
                 if (other_factor % k == 0):

@@ -1,11 +1,11 @@
 """
 the sum of all primes up to two million.
 """
-import primegen
+import primes
 
 def Euler_10():
     #verified
-    primes = primegen.all_primes(2e+6)
+    primes = primes.all_primes(2e+6)
     return sum(primes)
 
 if __name__ == "__main__":

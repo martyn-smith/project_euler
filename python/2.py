@@ -23,7 +23,7 @@ def Euler_2():
         if (f % 2) == 0:
             #print "found even f"
             sum += f
-        f_prev.extend([f])
+        f_prev.append(f)
     return sum
 
 if __name__ == "__main__":

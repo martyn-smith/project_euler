@@ -2,7 +2,7 @@
 various functions to generate primes
 """
 
-
+"""
 class PrimesByTrial:
     primes = []
 
@@ -15,7 +15,7 @@ class PrimesByTrial:
         if (is_prime):
             self.primes.append(x)
         return is_prime
-
+"""
 
 def nth_prime_by_trial(n):
     #by trial
