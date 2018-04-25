@@ -1,6 +1,7 @@
 """
 Find the sum of even-numbered fibonacci terms below four million.
 """
+import fibonaccigen
 
 def Euler_2():
     #verified, integrated fibonacci() into this
