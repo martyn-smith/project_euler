@@ -1,40 +1,28 @@
 """
 various functions to generate primes
 """
-
-"""
-class PrimesByTrial:
-    primes = []
-
-    def is_prime(self, x):
-        is_prime = True
-        for prime in self.primes:
-            if (x % prime == 0):
-                is_prime = False
-                break
-        if (is_prime):
-            self.primes.append(x)
-        return is_prime
-"""
-
-def nth_prime_by_trial(n):
+def prime_by_trial():
     #by trial
     primes = [2]
-    x = 3
-    while len(primes) < n:
-        #print "trying {}".format(x)
-        is_prime = True
-        for prime in primes:
-            if (x % prime == 0):
-                is_prime = False
-                break
-        if (is_prime):
-            #print("Prime: {}\t length: {}\n".format(x, len(primes) + 1))
-            primes.append(x)
-        x += 2
-    return primes[-1]
+    if len(primes) == 1:
+            yield primes[-1]
+    while True:
+        x = primes[-1] + 1
+        is_prime = False
+        while not is_prime:
+            is_prime = True
+            for prime in primes:
+                if (x % prime == 0):
+                    is_prime = False
+                    break
+            if (is_prime):
+                #print("Prime: {}\t length: {}\n".format(x, len(primes) + 1))
+                primes.append(x)
+            else:
+                x += 1
+        yield primes[-1]
 
-def all_primes(max_num):
+def primes_by_sieve(max_num):
     #uses a sieve to find all primes below big_num, returns all primes
     #why it runs so slowly I'm not sure...
     nums = [True] * int(max_num)

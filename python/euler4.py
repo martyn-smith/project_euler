@@ -4,12 +4,13 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 import itertools
 
 def Euler_4():
-    #verfified
+    #verified
     big_palindrome = 0
     for i, j in itertools.combinations(range(100,999), 2): #gives 403651 results?
-        candidate = i*j
+        candidate = (i*j)
         #we're doing it the hard way, damnit - no tostring() method!
         etadidnac = reverse(candidate)
+        #print(f"{candidate}\t{etadidnac}")
         if (etadidnac == candidate):
             big_palindrome = max(big_palindrome, candidate)
     return big_palindrome
@@ -23,8 +24,7 @@ def reverse(num):
         digit = num % 10
         mun *= 10
         mun += digit
-        #print "mun = {}".format(mun)
-        num /= 10
+        num //= 10
         i += 1
     return mun
 
