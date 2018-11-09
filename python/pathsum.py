@@ -1,15 +1,14 @@
 """
-Currently this module only holds smartsum
+Module to hold summing utilities for traversing a path.
 """
 
 def smartsum(data):
-    #apparently we only have to find the total, not the path
     """
     this algorithm will look at each number on each row,
     and add to it the maximum of the - up to - two numbers
     above that could be reached by adjacent path.
     The end result is a row of numbers at the bottom,
-    with the maximum being the result.
+    with the maximum being the result.  Note that it does not return the path.
 
     So for:
     3
@@ -24,15 +23,13 @@ def smartsum(data):
     20 19 23 16
     """
     prev_row = [0]
-    #rowcount = 0
     for row in data:
-        #rowcount += 1
         for i in range(0, len(row)):
             #print i, row[i], prev_row
             if (i==0):
-                row[i] += prev_row[i]
+                row[i] += prev_row[0]
             elif (i==len(row)-1):
-                row[i] += prev_row[i-1]
+                row[i] += prev_row[-1]
             else:
                 row[i] += max(prev_row[i], prev_row[i-1])
         prev_row = row

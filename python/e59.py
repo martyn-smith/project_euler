@@ -1,7 +1,6 @@
 """
-returns The Gospel of John, chapter 1 with key "god".  Pffft.
+Returns The Gospel of John, chapter 1 with key "god".  Pffft.
 """
-
 import numpy as np
 from itertools import product
 from string import ascii_lowercase

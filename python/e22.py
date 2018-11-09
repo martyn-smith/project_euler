@@ -1,13 +1,19 @@
 """
-find the 'score' of all the names in the data file.
+Find the 'score' of all the names in the data file.
 """
-points = {"a":1,"b":2,"c":3,"d":4,"e":5,"f":6,"g":7,"h":8,"i":9,"j":10,"k":11,
-          "l":12,"m":13,"n":14,"o":15,"p":16,"q":17,"r":18,"s":19,"t":20,"u":21,
-          "v":22,"w":23,"x":24,"y":25,"z":26}
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 def Euler_22():
-    with open("../names.txt") as f:
-        data = f.readlines()
-        data = lowercase()
-        data = quicksort(data)
-        score = sum(value * pos)
+    with open("../data/names.txt") as f:
+        names = f.read()[1:-1]
+        names = names.split('","')
+        names.sort()
+        #print([nm for nm in names if any(ltr for ltr in nm if ltr not in alphabet)])
+        score = sum(
+                    sum((alphabet.index(letter) + 1) for letter in word) 
+                    * (i + 1) for i, word in enumerate(names)
+                )
+    return score
+
+if __name__ == "__main__":
+    print(Euler_22())

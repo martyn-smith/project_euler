@@ -27,7 +27,6 @@ def primes_by_sieve(max_num):
     #why it runs so slowly I'm not sure...
     nums = [True] * int(max_num)
     primes = []
-    #primes[2:3] = [False, False]
     for i in range(2, len(nums)):
         if (nums[i] == True):
             primes.append(i)
