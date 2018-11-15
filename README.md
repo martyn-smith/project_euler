@@ -13,7 +13,7 @@ common library functions (e.g. prime generation) are in their own module.
 ## usage
 ---
 
-Python scripts can be run directly from the command line (e.g. "python e1.py") or 
+Python scripts can be run directly from the command line (e.g. 'python e1.py') or 
 by importing the solution function ("Euler_#()") from any file. 
 
 ## tests
