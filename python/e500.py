@@ -1,15 +1,13 @@
 """
-Finds the largest prime factor of the number 600851475143.
+Finds the smallest number with 2**500500 divisors,
+modulo 500500507
 """
-import numpy as np
-from primegen import primes_by_sieve
+from numpy import product
+from primegen import prime_by_trial
 
-def Euler_3():
-    big_num = 600851475143
-    #generate all the candidate primes
-    max_num = int(np.sqrt(big_num))
-    primes = primes_by_sieve(max_num)
-    return find_biggest_factor(primes, big_num)
+def Euler_500(num_divisors = 2**500500, mod_divisor = 500500507):
+    divisors_prime_tree = get_prime_factors(num_divisors)
+    return (product(i for i in divisors_prime_tree) % mod_divisor)
 
 def find_biggest_factor(primes, big_num):
     biggest_factor = 0
@@ -28,4 +26,4 @@ def find_biggest_factor(primes, big_num):
     return biggest_factor
 
 if __name__ == "__main__":
-    print(Euler_3())
+    print(Euler_500())
