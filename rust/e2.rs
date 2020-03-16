@@ -1,29 +1,32 @@
 /*
 Find the sum of even-numbered fibonacci terms below four million.
 */
-fn fibonacci(&fib_nums) -> i32 {
-    let len = fib_nums.len();
+fn fibonacci(fib_list: &Vec<isize>) -> isize {
+    let len = fib_list.len();
     match len {
-        0 => return(0),
-        1 => return(1),
-        _ => return(fib_nums[len -1] + fib_nums[len -2])
+        0 => 0,
+        1 => 1,
+        _ => fib_list[len -1] + fib_list[len -2]
     }
 }
 
-fn make_fibonacci_list(max_num: i32) -> Vec<i32> {
-    let mut f = 0;
-    let fib_nums = vec![];
-    while 
-}
-
-fn euler_2(max_num : i32) -> i32 {
-    let mut sum = 0;
-    for i in 0..max_num {
-        if (i % 2 == 0) {
-            sum += i;
+fn make_fibonacci_list(max_num: isize) -> Vec<isize> {
+    let mut f;
+    let mut fib_list = vec![];
+    loop {
+        f = fibonacci(&fib_list);
+        if f < max_num {
+            fib_list.push(f);
+        } else {
+            break;
         }
     }
-    return sum;
+    fib_list
+}
+
+fn euler_2(max_num : isize) -> isize {
+    let fib_list = make_fibonacci_list(max_num);
+    fib_list.into_iter().filter(|&x| x % 2 == 0).sum()
 }
 
 fn main() {
