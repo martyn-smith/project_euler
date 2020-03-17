@@ -4,11 +4,14 @@
     (zero? (mod number divisor))
 )
 
-(def fizzers (3 5))
+(defn fizzable?
+[number]
+    (some true? (map (partial divisible? number) '(3 5)))
+)
 
 (defn E1 
 [max_num]
-    (reduce + (filter divisible? (range max_num) (fizzers)))
+    (reduce + (filter fizzable? (range max_num)))
 )
 
 (println (format "%d" (E1 1000)))
