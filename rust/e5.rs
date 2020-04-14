@@ -13,7 +13,6 @@ use std::cmp;
 fn euler_5() -> isize {
     let n = 20;
     let (mut power, mut base);
-    let mut answer = 1;
     let (mut primes, mut powers) = (vec![2], vec![0]);
     for j in 2..=n {
         base = j;
@@ -30,10 +29,9 @@ fn euler_5() -> isize {
             powers.push(1);
         }
     }
-    for (base, power) in primes.iter().zip(powers.iter()) {
-        answer *= (*base as isize).pow(*power) as isize;
-    }
-    answer
+    primes.iter()
+        .zip(powers.iter())
+        .fold(1, |answer, x| answer * (*x.0 as isize).pow(*x.1) as isize)
 }
 
 fn main() {
