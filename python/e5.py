@@ -22,6 +22,7 @@ def Euler_5(n = 20):
         if num > 1: #is prime
             primes.append(num)
             powers.append(1)
+    #TODO: decide on using functools.reduce (less clear) or math.prod (>3.8 dependency)
     answer = 1
     for base, power in zip(primes, powers):
         answer *= base**power
