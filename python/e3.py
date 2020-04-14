@@ -20,5 +20,8 @@ def find_biggest_factor_reversed(primes, big_num):
 def find_biggest_factor_functional(primes, big_num):
     return max(p for p in primes if big_num % p == 0)
 
+def test_3():
+    assert Euler_3() == 6857
+
 if __name__ == "__main__":
     print(Euler_3())

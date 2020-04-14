@@ -15,5 +15,8 @@ def Euler_22():
                 )
     return score
 
+def test_22():
+    assert Euler_22() == 871198282
+
 if __name__ == "__main__":
     print(Euler_22())

@@ -8,16 +8,32 @@ numbers from 1 to 20.
 
 */
 
+use std::cmp;
+
 fn euler_5() -> isize {
-    let mut candidate = 1;
-    //let primes = [2, 3, 5, 7, 11, 13, 17, 19];
-    loop {
-        if (1..=20).filter(|p| candidate % *p == 0).count() == 20 {
-            break;
+    let n = 20;
+    let (mut power, mut base);
+    let mut answer = 1;
+    let (mut primes, mut powers) = (vec![2], vec![0]);
+    for j in 2..=n {
+        base = j;
+        for (i, p) in primes.iter().enumerate() {
+            power = 0;
+            while base % p == 0 {
+                power += 1;
+                base /= p;
+            }
+            powers[i] = cmp::max(power, powers[i]);
         }
-        candidate += 1;
+        if base > 1 { //is prime
+            primes.push(base);
+            powers.push(1);
+        }
     }
-    candidate
+    for (base, power) in primes.iter().zip(powers.iter()) {
+        answer *= (*base as isize).pow(*power) as isize;
+    }
+    answer
 }
 
 fn main() {

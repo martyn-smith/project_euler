@@ -11,5 +11,8 @@ def Euler_18():
     result = smartsum(data)
     return result
 
+def test_18():
+    assert Euler_18() == 1074
+
 if __name__ == "__main__":
     print(Euler_18())

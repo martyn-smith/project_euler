@@ -28,5 +28,8 @@ def reverse(num):
         i += 1
     return mun
 
+def test_4():
+    assert Euler_4() == 906609
+
 if __name__ == "__main__":
     print(Euler_4())
