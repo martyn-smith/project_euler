@@ -14,7 +14,6 @@ def Euler_6_easy_way():
 
 def Euler_6_better_way():
     #uses S_n = n(a_1 + a_n)/2
-    print(f"{((1e+6)/3)} + {(1e+4)/2} + {100/6}")
     sum_of_squares = int((1e+6)/3 + (1e+4)/2 + 100/6)
     square_of_sum = int((100*101/2)**2)
     return square_of_sum - sum_of_squares
