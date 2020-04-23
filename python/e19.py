@@ -6,15 +6,17 @@ from datetime import date, timedelta
 
 def Euler_19():
     #verified
-    trial_date = date(1901, 1, 1)
+    start_date = date(1901, 1, 1)
     end_date = date(2001,1,1) #one extra to account for range()
     result = 0
-    while (trial_date < end_date):
-        if (trial_date.day == 1) and (trial_date.isoweekday() == 7):
+    while (start_date < end_date):
+        if (start_date.day == 1) and (start_date.isoweekday() == 7):
             result += 1
-        trial_date += timedelta(days=1)
-
+        start_date += timedelta(days = 1)
     return result
+
+def test_19():
+    assert Euler_19() == 171
 
 if __name__ == "__main__":
     print(Euler_19())

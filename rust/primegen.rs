@@ -16,3 +16,36 @@ pub fn primes_by_sieve(max_num : isize) -> Vec<isize> {
     }
     primes
 }
+
+fn is_prime(candidate : usize, primes: &Vec<usize>) -> bool {
+    let mut is_prime = false;
+    while !is_prime {
+        is_prime = true;
+        for prime in primes {
+            if (candidate % primes == 0){
+                is_prime = false;
+                break;
+            }
+        }
+    is_prime
+}
+
+impl next_prime for Vec<usize> {
+    
+}
+
+pub fn nth_prime(n: usize) -> usize {
+    let mut primes : Vec<usize> = vec![2];
+    let mut candidate : usize;
+    while primes.len() < n {
+        candidate = *primes.last().unwrap() + 1;
+        while primes.iter()
+                  .filter(|&i| candidate % i == 0)
+                  .collect::<Vec<&usize>>()
+                  .len() > 0 {
+            candidate += 1;
+        }
+        primes.push(candidate);
+    }
+    *primes.last().unwrap()
+}

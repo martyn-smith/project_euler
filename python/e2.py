@@ -14,7 +14,6 @@ def Euler_2(n = 4e+6):
         f = next(fb)
         #test for even and sum
         if (f % 2) == 0:
-            #print "found even f"
             result += f
     return result
 

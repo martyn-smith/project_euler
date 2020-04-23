@@ -4,10 +4,12 @@ finds the maximum product of four adjacent numbers in a 20x20 grid.
 
 from numpy import loadtxt, transpose
 
+FILENAME = "../data/11.dat"
+
 def Euler_11():
     #verified
     #diagonals are the tricky part, rest is easy
-    data = loadtxt("../data/11.dat", dtype = int)
+    data = loadtxt(FILENAME, dtype = int)
     big_num = max(find_max_in_rows(data), find_max_in_rows(transpose(data)), find_max_in_diagonals(data))
     return big_num
 
