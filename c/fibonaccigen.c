@@ -67,7 +67,7 @@ int fibonacci_iterative(int n) {
 }
 
 int fibonacci_sum(int n) {
-    int sum = 0,seq[3] = {0, 1, NULL};
+    int sum = 0, seq[3] = {0, 1, NULL};
     while (seq[1] < n) {
         seq[2] = seq[1] + seq[0];
         seq[0] = seq[1];

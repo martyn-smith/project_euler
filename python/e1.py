@@ -5,9 +5,8 @@ divisors = (3,5)
 
 def Euler_1(n = 1000):
     #verified.
-    result = sum(i for i in range(0, n)
+    return sum(i for i in range(0, n)
                 if any(i % d == 0 for d in divisors))
-    return result
 
 def test_1():
     assert Euler_1() == 233168
