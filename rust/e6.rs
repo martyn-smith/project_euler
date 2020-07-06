@@ -9,7 +9,7 @@ and the sum of the squares.
 
 fn euler_6_easy_way() -> usize {
     let sum_of_squares: usize = (1..=100).map(|x: usize| x.pow(2)).sum();
-    let square_of_sum = (1..=100).sum::<usize>().pow(2);
+    let square_of_sum: usize = (1..=100).sum::<usize>().pow(2);
     square_of_sum - sum_of_squares
 }
 

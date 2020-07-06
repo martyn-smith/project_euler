@@ -17,5 +17,6 @@ def Euler_8():
             product *= int(j)
         big_product = max(product, big_product)
     return big_product
+
 if __name__ == "__main__":
     print(Euler_8())
