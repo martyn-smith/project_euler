@@ -10,7 +10,7 @@ numbers from 1 to 20.
 
 use std::cmp;
 
-fn euler_5() -> isize {
+fn euler_5() -> usize {
     let n = 20;
     let (mut power, mut base);
     let (mut primes, mut powers) = (vec![2], vec![0]);
@@ -31,7 +31,7 @@ fn euler_5() -> isize {
     }
     primes.iter()
         .zip(powers.iter())
-        .fold(1, |answer, x| answer * (*x.0 as isize).pow(*x.1) as isize)
+        .fold(1, |answer, x| answer * (*x.0 as usize).pow(*x.1 as u32) )
 }
 
 fn main() {
