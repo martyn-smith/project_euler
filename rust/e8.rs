@@ -4,37 +4,31 @@ Find the thirteen adjacent digits in the 1000-digit number that have
 the greatest product.
 */
 
-use std::cmp;
-use std::collections::VecDeque;
-use std::fs::File;
-use std::io::Read;
+use std::fs; 
 
 const FILENAME : &str = "../data/8.dat";
-const BUFFER_LEN : usize = 1000;
 const WINDOW_LEN : usize = 13;
 
 fn euler_8() -> usize {
-    //verified - or at least python equivalent.
-    let mut f = File::open(FILENAME).unwrap();
+    // verified - or at least python equivalent.
+    // read whole file as ASCII and convert.
+    let numbers : Vec<u8> = fs::read(FILENAME).unwrap().iter().map(|x| x - 0x30).collect();
 
-    // read whole file as ASCII.
-    let mut numbers = [0u8; BUFFER_LEN];
-    f.read(&mut numbers).unwrap();
-
-    let mut max_product = 0;
-    let mut prod : usize;
-
-    //load first thirteen into window and convert to ascii
-    let mut window: VecDeque::<u8> = numbers[0..WINDOW_LEN].iter().map(|x| x - 0x30).collect();
-    /*cycle through, pushing new element and popping oldest. 
-    If product is larger, reassign - we only care about the result.*/
-    for i in 0..(BUFFER_LEN - WINDOW_LEN) {
-        window.pop_front();
-        window.push_back(numbers[i] - 0x30);
-        prod = window.iter().fold(1, |prod, val| prod * *val as usize);
-        max_product = cmp::max(prod, max_product);
-    }
-    max_product
+    /* Old way: load first thirteen into a queue, then push new/pop last.
+       Requires std::collections::VecDeque, std::iter::FromIterator, and std::cmp::max.
+       Then I discovered windows() exists.
+        // let mut window = VecDeque::from_iter(numbers[0..WINDOW_LEN].iter());
+        // for i in 0..(numbers.len() - WINDOW_LEN) {
+        //     window.pop_front();
+        //     window.push_back(&numbers[i]);
+        //     max_product = cmp::max(window.iter().map(|&&x| x as usize).product(), max_product);
+        // }
+    */
+    numbers.windows(WINDOW_LEN)
+                .map(|wndw| wndw.iter()
+                    .map(|&x| x as usize)
+                    .product())
+                .max().unwrap()
 }
 
 fn main() {
