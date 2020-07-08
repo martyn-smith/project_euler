@@ -18,3 +18,17 @@ fn iterative(mut n : usize) -> usize {
     }
     seq[n]
 }
+
+pub fn make_list(max_num: usize) -> Vec<usize> {
+    let mut f;
+    let mut fib_list = vec![];
+    loop {
+        f = recursive(fib_list.len());
+        if f < max_num {
+            fib_list.push(f);
+        } else {
+            break;
+        }
+    }
+    fib_list
+}
