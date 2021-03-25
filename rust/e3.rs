@@ -13,3 +13,8 @@ fn euler_3(big_num : usize) -> usize {
 fn main() {
     println!("{}", euler_3(600_851_475_143));
 }
+
+#[test]
+fn test_euler_3() {
+    assert_eq!(euler_3(600_851_475_143), 6857);
+}

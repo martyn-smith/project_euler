@@ -9,3 +9,8 @@ fn euler_1(max_num : usize) -> usize {
 fn main() {
     println!("{}", euler_1(1000));
 }
+
+#[test]
+fn test_euler_1() {
+    assert_eq!(euler_1(1000), 233168);
+}
