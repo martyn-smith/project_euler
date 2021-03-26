@@ -28,7 +28,7 @@ def primes_by_sieve(max_num):
     nums = [True] * int(max_num)
     primes = []
     for i in range(2, len(nums)):
-        if (nums[i] == True):
+        if nums[i]:
             primes.append(i)
             j = 2
             while (j * i) < len(nums):
