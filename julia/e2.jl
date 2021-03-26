@@ -1,12 +1,7 @@
-function fib(max_num::Int)
-   a, b = 0, 1
-   Channel(ctype=Int, csize=1) do c
-       while (b < max_num)
-           put!(c, b)
-           a, b = b, a+b
-       end
-   end
-end
+#Find the sum of all even-numbered fibonacci terms below four million.
+#as always, the actual fibonacci generation will be in a separate package.
+
+include("fibgen.jl")
 
 function euler_2(max_num::Int)::Int
    reduce(+, filter(x -> x % 2 == 0, collect(fib(max_num))))
