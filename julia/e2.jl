@@ -7,4 +7,4 @@ function euler_2(max_num::Int)::Int
    reduce(+, filter(x -> x % 2 == 0, collect(Iterators.takewhile(<(max_num), fib()))))
 end
 
-print(euler_2(4000000))
+println(euler_2(4000000))
