@@ -4,7 +4,7 @@
 include("fibgen.jl")
 
 function euler_2(max_num::Int)::Int
-   reduce(+, filter(x -> x % 2 == 0, collect(Iterators.takewhile(<(max_num), fib()))))
+   sum(filter(x -> x % 2 == 0, collect(Iterators.takewhile(<(max_num), fib()))))
 end
 
 println(euler_2(4000000))
