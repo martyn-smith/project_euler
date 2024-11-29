@@ -1,18 +1,13 @@
 #![allow(dead_code)]
 
-//when tested with n=2_000_000 and for loop, first flaw is 1999117, product of 947 and 2111
-pub fn primes_by_sieve(max_num : usize) -> Vec<usize> {
-    let mut sieve = vec![true; max_num as usize];
+pub fn primes_by_sieve(m : usize) -> Vec<usize> {
+    let mut sieve = vec![true; m as usize];
     let mut primes : Vec<usize> = vec![];
-    let mut j: usize;
-    for i in 2..sieve.len() {
+    for i in 2..m {
         if sieve[i] { //is prime
             primes.push(i as usize);
-            j = 2;
-            //for j in 2..=sieve.len() / i //omitted as couldn't get the offsets to work.
-            while i*j < sieve.len() { 
+            for j in 2..=((m - 1) / i) {
                 sieve[i * j] = false;
-                j += 1;
             }
         }
     }
